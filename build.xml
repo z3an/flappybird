@@ -1,0 +1,29 @@
+<project name="CS349-A1" default="run" basedir=".">
+  <description>
+    Assignment 1 of CS 349, Spring 2017.
+  </description>
+  <!-- set global properties for this build -->
+  <property name="run_class" value="Main"/>
+  <property name="src" location="./src"/>
+  <property name="dest" location="./out"/>
+
+  <target name="compile"
+		description="compile the source">
+    <!-- Compile the java code from ${src} into ${dest} -->
+    <javac srcdir="${src}" destdir="${dest}" includeAntRuntime="false"/>
+  </target>
+
+  <target name="run" depends="compile"
+        description="runs the program">
+    <!-- Create the distribution directory -->
+    <java classname="${run_class}" classpath="${dest}" fork="true"/>
+  </target>
+
+  <target name="clean"
+		description="clean up">
+    <!-- Delete the all files and subdirectories from ${dest} -->
+    <delete includeemptydirs="true">
+		<fileset dir="${dest}" includes="**/*"/>
+	</delete>
+  </target>
+</project>

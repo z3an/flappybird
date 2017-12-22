@@ -1,0 +1,20 @@
+# Format of this file:
+# Lines beginning with '#' are comments (ignore them when loading the file).
+# The first line which is not a comment contains the dimensions of the world (horizontal, vertical) in blocks.
+# All the remaining lines contain an obstacle per line, in the following format:
+#   top_left_x, top_left_y, bottom_right_x, bottom_right_y  (all measures are in blocks)
+# You don't have to use this format for your submission; feel free to change it to a different format if you wish.
+100, 10
+10, 0, 10, 5
+15, 2, 16, 7
+20, 0, 22, 3
+30, 0, 30, 5
+35, 2, 36, 7
+40, 0, 42, 3
+50, 0, 50, 5
+55, 5, 55, 9
+60, 0, 63, 4
+70, 0, 70, 8
+75, 1, 76, 8
+80, 0, 82, 3
+90, 0, 95, 5
